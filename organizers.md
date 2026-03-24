@@ -8,7 +8,7 @@ nav_order: 6
 
 <h2 style="text-align: center;">Advisors</h2>
 
-<div class="organizer-flex">
+<div class="single-card-flex">
   {% for advisor in site.data.organizers.advisors %}
   <div class="organizer-card">
     <img src="{{ advisor.image }}" alt="{{ advisor.name }}" class="organizer-img"/>
@@ -36,7 +36,7 @@ nav_order: 6
 
 <h2 style="text-align: center;">Student Volunteers</h2>
 
-<div class="organizer-flex">
+<div class="single-card-flex">
   {% for volunteer in site.data.organizers.volunteers %}
   <div class="organizer-card">
     <img src="{{ volunteer.image }}" alt="{{ volunteer.name }}" class="volunteer-img"/>
