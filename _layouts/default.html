@@ -35,7 +35,7 @@
     <!-- Sticky Navbar -->
     <nav class="site-nav" id="site-nav">
       <div class="nav-container">
-        <a href="/" class="nav-brand">
+        <a href="{{ '/' | relative_url }}" class="nav-brand">
           <span class="nav-brand-text">NSG 2026</span>
         </a>
         <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
@@ -50,7 +50,7 @@
             {% assign navigation = site[page.navigation] %}
           {% endif %}
           {% for item in navigation %}
-            <a href="{{ item[1] }}" class="nav-link {% if page.url == item[1] %}active{% endif %}">{{ item[0] }}</a>
+            <a href="{{ item[1] | relative_url }}" class="nav-link {% if page.url == item[1] %}active{% endif %}">{{ item[0] }}</a>
           {% endfor %}
         </div>
       </div>
