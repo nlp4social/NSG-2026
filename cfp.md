@@ -7,7 +7,7 @@ title: Call For Papers
 
 # Call For Papers
 
-NSG-2025 invites authors to submit papers on research that leverages Natural Language Processing (NLP) techniques to address a wide range of social issues, including but not limited to education, law, healthcare, climate change, and any of the United Nations Sustainable Development Goals (SDGs).
+NSG-2026 invites authors to submit papers on research that leverages Natural Language Processing (NLP) techniques to address a wide range of social issues, including but not limited to education, law, healthcare, climate change, and any of the United Nations Sustainable Development Goals (SDGs).
 
 ## Topics of Interest
 

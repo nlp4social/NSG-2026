@@ -1,8 +1,77 @@
 @import "normalize";
 @import "rouge-github";
 @import "variables";
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 
+// ============================================================
+// Keyframe Animations
+// ============================================================
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroGradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 4px 14px rgba($accent, 0.35);
+  }
+  50% {
+    box-shadow: 0 4px 28px rgba($accent, 0.55), 0 0 40px rgba($accent, 0.2);
+  }
+}
+
+@keyframes floatOrb {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  33% {
+    transform: translate(30px, -40px) scale(1.1);
+    opacity: 0.5;
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+    opacity: 0.35;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ============================================================
+// Mixins
+// ============================================================
 @mixin large {
   @media screen and (min-width: #{$large-breakpoint}) {
     @content;
@@ -21,17 +90,88 @@
   }
 }
 
+@mixin glass($bg: $glass-bg, $border: $glass-border, $blur: $glass-blur) {
+  background: $bg;
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
+  border: 1px solid $border;
+}
+
+@mixin glass-hover {
+  background: $glass-bg-hover;
+  border-color: $glass-border-hover;
+  box-shadow: $shadow-lg, 0 0 40px rgba($primary-light, 0.08);
+}
+
+// ============================================================
+// Base Reset
+// ============================================================
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
 }
 
 body {
   padding: 0;
   margin: 0;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.7;
   color: $body-text-color;
+  background-color: $bg-light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+// Gradient mesh background
+.gradient-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: $bg-light;
+}
+
+.gradient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: floatOrb 20s ease-in-out infinite;
+
+  &.orb-1 {
+    width: 500px;
+    height: 500px;
+    background: rgba($primary-light, 0.12);
+    top: -10%;
+    right: -5%;
+    animation-delay: 0s;
+  }
+
+  &.orb-2 {
+    width: 400px;
+    height: 400px;
+    background: rgba($accent, 0.08);
+    bottom: 10%;
+    left: -8%;
+    animation-delay: -7s;
+  }
+
+  &.orb-3 {
+    width: 350px;
+    height: 350px;
+    background: rgba($primary, 0.07);
+    top: 50%;
+    right: 30%;
+    animation-delay: -14s;
+  }
 }
 
 #skip-to-content {
@@ -49,117 +189,416 @@ body {
     width: auto;
     background: invert($body-link-color);
     outline: thick solid invert($body-link-color);
+    z-index: 10000;
   }
 }
 
 a {
-  color: blue;
+  color: $body-link-color;
   text-decoration: none;
+  transition: color $transition-fast;
 
   &:hover {
+    color: $primary;
     text-decoration: underline;
   }
 }
 
-.btn {
-  display: inline-block;
-  margin-bottom: 1rem;
-  color: rgba(5, 5, 81, 0.85);
-  background-color: rgba(122, 228, 241, 0.8);
-  border-color: rgba(255, 255, 255, 0.2);
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 0.3rem;
-  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+// ============================================================
+// Sticky Glass Navbar
+// ============================================================
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  @include glass(rgba($primary, 0.75), rgba(255, 255, 255, 0.06), 24px);
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background $transition-med, box-shadow $transition-med, border-color $transition-med;
+
+  &.nav-scrolled {
+    background: rgba($primary-dark, 0.92);
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+    border-bottom-color: rgba($primary-light, 0.15);
+  }
+}
+
+.nav-container {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 64px;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: $text-light;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+  transition: color $transition-fast, transform $transition-fast;
 
   &:hover {
-    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.3);
+    color: $accent;
+    transform: scale(1.02);
   }
+}
 
-  + .btn {
-    margin-left: 1rem;
-  }
+.nav-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: $radius-sm;
+  object-fit: contain;
+  transition: transform $transition-fast;
 
-  @include large {
-    padding: 0.75rem 1rem;
+  .nav-brand:hover & {
+    transform: rotate(-5deg) scale(1.08);
   }
+}
 
-  @include medium {
-    padding: 0.6rem 0.9rem;
-    font-size: 0.9rem;
+.nav-brand-text {
+  @include small {
+    display: inline;
   }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
 
   @include small {
-    display: block;
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 0.9rem;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    @include glass(rgba($primary-dark, 0.92), rgba(255, 255, 255, 0.05), 28px);
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 0.75rem 0;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 
-    + .btn {
-      margin-top: 1rem;
-      margin-left: 0;
+    &.nav-open {
+      display: flex;
+      animation: slideDown 0.3s $ease-out-expo;
     }
   }
 }
 
-.page-header {
-  color: $header-heading-color;
-  text-align: center;
-  background-color: $header-bg-color;
-  background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
-  @include large {
-    padding: 5rem 6rem;
+.nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0.45rem 0.85rem;
+  border-radius: $radius-sm;
+  transition: color $transition-fast, background-color $transition-fast, transform $transition-fast;
+  white-space: nowrap;
+  position: relative;
+
+  &:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.12);
+    text-decoration: none;
+    transform: translateY(-1px);
   }
 
+  &.active {
+    color: $accent;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 2px;
+      background: $accent;
+      border-radius: 1px;
+    }
+  }
+
+  @include small {
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.06);
+      transform: none;
+    }
+
+    &.active::after {
+      display: none;
+    }
+  }
+}
+
+// Hamburger button
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+
+  @include small {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.hamburger-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: $text-light;
+  border-radius: 2px;
+  transition: transform 0.3s $ease-out-expo, opacity 0.3s ease;
+}
+
+.hamburger.is-active {
+  .hamburger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
+// ============================================================
+// Hero Section
+// ============================================================
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: $text-light;
+  background-image: url("NSG.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 64px;
+  overflow: hidden;
+
+  @include large {
+    min-height: 540px;
+    padding: 5rem 4rem;
+  }
   @include medium {
+    min-height: 440px;
+    padding: 4rem 3rem;
+  }
+  @include small {
+    min-height: 380px;
+    padding: 3.5rem 1.5rem;
+  }
+}
+
+.hero-slim {
+  @include large {
+    min-height: 200px;
     padding: 3rem 4rem;
   }
-
+  @include medium {
+    min-height: 180px;
+    padding: 2.5rem 3rem;
+  }
   @include small {
-    padding: 2rem 1rem;
+    min-height: 150px;
+    padding: 2rem 1.5rem;
   }
 }
 
-.project-name {
-  margin-top: 0;
-  margin-bottom: 0.1rem;
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba($primary-dark, 0.85) 0%,
+    rgba($primary, 0.72) 40%,
+    rgba($primary-light, 0.6) 100%
+  );
+  background-size: 200% 200%;
+  animation: heroGradientShift 12s ease-in-out infinite;
+  z-index: 1;
+}
 
-  @include large {
-    font-size: 3.25rem;
-  }
+// Floating decorative orbs in hero
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero::before {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba($accent, 0.12) 0%, transparent 70%);
+  top: -50px;
+  right: -80px;
+  animation: floatOrb 15s ease-in-out infinite;
+}
+
+.hero::after {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba($primary-light, 0.15) 0%, transparent 70%);
+  bottom: -30px;
+  left: -40px;
+  animation: floatOrb 18s ease-in-out infinite reverse;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 48rem;
+  animation: fadeInUp 0.8s $ease-out-expo;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 
   @include medium {
-    font-size: 2.25rem;
+    font-size: 2.2rem;
   }
-
   @include small {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
   }
 }
 
-.project-tagline {
-  margin-bottom: 2rem;
-  font-weight: normal;
-  opacity: 0.7;
-
-  @include large {
-    font-size: 1.25rem;
-  }
+.hero-title-slim {
+  font-size: 2rem;
+  margin-bottom: 0;
 
   @include medium {
-    font-size: 1.15rem;
+    font-size: 1.7rem;
   }
+  @include small {
+    font-size: 1.4rem;
+  }
+}
+
+.hero-tagline {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
 
   @include small {
     font-size: 1rem;
   }
 }
 
+.hero-meta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+
+  // Glass pill for meta items
+  span {
+    @include glass(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), 10px);
+    padding: 0.4rem 1.1rem;
+    border-radius: 50px;
+  }
+
+  @include small {
+    flex-direction: column;
+    gap: 0.6rem;
+    font-size: 0.95rem;
+    align-items: center;
+  }
+}
+
+.hero-cta {
+  display: inline-block;
+  background: $accent;
+  color: $primary-dark;
+  padding: 0.85rem 2.2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: background $transition-fast, transform $transition-fast, box-shadow $transition-fast;
+  box-shadow: 0 4px 14px rgba($accent, 0.35);
+  animation: pulseGlow 3s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+
+  // Shimmer overlay
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.6s ease;
+  }
+
+  &:hover {
+    background: $accent-hover;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 30px rgba($accent, 0.5);
+    text-decoration: none;
+    color: $primary-dark;
+    animation: none;
+
+    &::before {
+      left: 100%;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px) scale(1.01);
+  }
+}
+
+// ============================================================
+// Main Content — Glass Card
+// ============================================================
 .main-content {
   word-wrap: break-word;
+  @include glass($glass-bg, $glass-border, $glass-blur);
+  position: relative;
+  animation: fadeInUp 0.6s $ease-out-expo 0.1s both;
 
   :first-child {
     margin-top: 0;
@@ -167,74 +606,72 @@ a {
 
   @include large {
     max-width: 64rem;
-    padding: 2rem 6rem;
-    margin: 0 auto;
-    font-size: 1.1rem;
+    padding: 3rem 4rem;
+    margin: 2rem auto;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-md;
   }
 
   @include medium {
-    padding: 2rem 4rem;
-    font-size: 1.1rem;
+    padding: 2rem 2.5rem;
+    margin: 1.5rem 1rem;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-md;
   }
 
   @include small {
-    padding: 2rem 1rem;
-    font-size: 1rem;
-  }
-  
-  kbd {
-    background-color: #fafbfc;
-    border: 1px solid #c6cbd1;
-    border-bottom-color: #959da5;
-    border-radius: 3px;
-    box-shadow: inset 0 -1px 0 #959da5;
-    color: #444d56;
-    display: inline-block;
-    font-size: 11px;
-    line-height: 10px;
-    padding: 3px 5px;
-    vertical-align: middle;
+    padding: 1.5rem 1.25rem;
+    margin: 1rem 0.5rem;
+    border-radius: $radius-md;
+    box-shadow: $shadow-sm;
   }
 
   img {
     max-width: 100%;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6 {
     margin-top: 2rem;
     margin-bottom: 1rem;
-    font-weight: normal;
+    font-weight: 700;
     color: $section-headings-color;
+    letter-spacing: -0.01em;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba($primary-light, 0.15);
+  }
+
+  h3 {
+    font-size: 1.3rem;
   }
 
   p {
     margin-bottom: 1em;
+    text-align: justify;
   }
 
   code {
-    padding: 2px 4px;
-    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    font-size: 0.9rem;
+    padding: 2px 6px;
+    font-family: "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.88rem;
     color: $code-text-color;
     background-color: $code-bg-color;
-    border-radius: 0.3rem;
+    border-radius: 4px;
   }
 
   pre {
-    padding: 0.8rem;
+    padding: 1rem;
     margin-top: 0;
     margin-bottom: 1rem;
-    font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font: 0.9rem "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
     color: $code-text-color;
     word-wrap: normal;
     background-color: $code-bg-color;
     border: solid 1px $border-color;
-    border-radius: 0.3rem;
+    border-radius: $radius-sm;
 
     > code {
       padding: 0;
@@ -250,25 +687,22 @@ a {
 
   .highlight {
     margin-bottom: 1rem;
-
     pre {
       margin-bottom: 0;
       word-break: normal;
     }
   }
 
-  .highlight pre,
-  pre {
-    padding: 0.8rem;
+  .highlight pre, pre {
+    padding: 1rem;
     overflow: auto;
     font-size: 0.9rem;
     line-height: 1.45;
-    border-radius: 0.3rem;
+    border-radius: $radius-sm;
     -webkit-overflow-scrolling: touch;
   }
 
-  pre code,
-  pre tt {
+  pre code, pre tt {
     display: inline;
     max-width: initial;
     padding: 0;
@@ -279,14 +713,12 @@ a {
     background-color: transparent;
     border: 0;
 
-    &:before,
-    &:after {
+    &:before, &:after {
       content: normal;
     }
   }
 
-  ul,
-  ol {
+  ul, ol {
     margin-top: 0;
   }
 
@@ -294,12 +726,11 @@ a {
     padding: 0 1rem;
     margin-left: 0;
     color: $blockquote-text-color;
-    border-left: 0.3rem solid $border-color;
+    border-left: 4px solid $primary-light;
 
     > :first-child {
       margin-top: 0;
     }
-
     > :last-child {
       margin-bottom: 0;
     }
@@ -310,16 +741,15 @@ a {
     width: 100%;
     overflow: auto;
     word-break: normal;
-    word-break: keep-all; // For Firefox to horizontally scroll wider tables.
+    word-break: keep-all;
     -webkit-overflow-scrolling: touch;
 
     th {
-      font-weight: bold;
+      font-weight: 600;
     }
 
-    th,
-    td {
-      padding: 0.5rem 1rem;
+    th, td {
+      padding: 0.65rem 1rem;
       border: 1px solid $table-border-color;
     }
   }
@@ -341,37 +771,332 @@ a {
   }
 
   hr {
-    height: 2px;
+    height: 1px;
     padding: 0;
-    margin: 1rem 0;
-    background-color: $hr-border-color;
+    margin: 2rem 0;
+    background: linear-gradient(90deg, transparent, rgba($primary-light, 0.2), transparent);
     border: 0;
   }
 }
 
+// ============================================================
+// Glass Cards — Speakers, Organizers, Papers
+// ============================================================
+.speaker-flex,
+.organizer-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.speaker-card,
+.organizer-card {
+  text-align: center;
+  @include glass($glass-bg, $glass-border, 16px);
+  border-radius: $radius-lg;
+  box-shadow: $shadow-md;
+  padding: 1.75rem 1.25rem 1.25rem;
+  width: 100%;
+  max-width: 320px;
+  transition: transform $transition-med, box-shadow $transition-med, background $transition-med, border-color $transition-med;
+  position: relative;
+  overflow: hidden;
+
+  // Shimmer border effect
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -200%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+    transition: left 0.8s ease;
+    pointer-events: none;
+  }
+
+  &:hover {
+    transform: translateY(-8px) scale(1.02);
+    @include glass-hover;
+
+    &::before {
+      left: 200%;
+    }
+  }
+}
+
+.speaker-img,
+.organizer-img,
+.volunteer-img {
+  border-radius: $radius-full;
+  object-fit: cover;
+  border: 3px solid rgba($primary-light, 0.2);
+  transition: border-color $transition-med, box-shadow $transition-med, transform $transition-med;
+}
+
+.speaker-img {
+  width: 140px;
+  height: 140px;
+}
+
+.organizer-img {
+  width: 180px;
+  height: 180px;
+}
+
+.volunteer-img {
+  width: 130px;
+  height: 130px;
+}
+
+.speaker-card:hover .speaker-img,
+.organizer-card:hover .organizer-img,
+.organizer-card:hover .volunteer-img {
+  border-color: $primary-light;
+  box-shadow: 0 0 20px rgba($primary-light, 0.2), 0 0 40px rgba($primary-light, 0.08);
+  transform: scale(1.05);
+}
+
+.speaker-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+
+  a {
+    color: $primary;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $primary-light;
+      text-decoration: underline;
+    }
+  }
+}
+
+.speaker-designation {
+  font-size: 0.9rem;
+  color: $text-secondary;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.speaker-abstract,
+.paper-details {
+  display: none;
+  text-align: justify;
+  margin-top: 0.75rem;
+  @include glass(rgba($bg-light, 0.7), rgba($primary-light, 0.1), 10px);
+  border-radius: $radius-md;
+  padding: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.speaker-toggle-btn,
+.paper-toggle-btn {
+  background: linear-gradient(135deg, $primary, $primary-light);
+  color: $text-light;
+  border: none;
+  border-radius: 50px;
+  padding: 0.5rem 1.3rem;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: background $transition-fast, transform $transition-fast, box-shadow $transition-fast;
+  box-shadow: 0 2px 8px rgba($primary, 0.2);
+
+  &:hover {
+    background: linear-gradient(135deg, $primary-light, $primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba($primary, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Paper cards
+.paper-list-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.paper-card {
+  @include glass($glass-bg, $glass-border, 16px);
+  border-radius: $radius-lg;
+  box-shadow: $shadow-md;
+  padding: 1.5rem;
+  width: min(90vw, 56rem);
+  transition: transform $transition-med, box-shadow $transition-med, background $transition-med, border-color $transition-med;
+
+  &:hover {
+    transform: translateY(-4px);
+    @include glass-hover;
+  }
+}
+
+.paper-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+  color: $text-primary;
+}
+
+.paper-authors {
+  font-size: 0.92rem;
+  color: $text-secondary;
+  margin-bottom: 0.75rem;
+}
+
+// ============================================================
+// Schedule Table — Glass Header
+// ============================================================
+.schedule-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: 2rem;
+  border-radius: $radius-md;
+  overflow: hidden;
+  box-shadow: $shadow-sm;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid rgba($table-border-color, 0.6);
+  padding: 0.85rem 1.1rem;
+  text-align: left;
+}
+
+.schedule-table th {
+  background: linear-gradient(135deg, $primary, $primary-light);
+  color: $text-light;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.schedule-table td {
+  background: $glass-bg;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: $text-primary;
+  font-size: 0.95rem;
+  transition: background $transition-fast, transform $transition-fast;
+}
+
+.schedule-table tbody tr {
+  transition: transform $transition-fast;
+
+  &:hover {
+    td {
+      background: rgba($primary-light, 0.06);
+    }
+  }
+}
+
+td {
+  vertical-align: top;
+}
+
+// ============================================================
+// Glass Footer
+// ============================================================
 .site-footer {
-  padding-top: 2rem;
-  margin-top: 2rem;
-  border-top: solid 1px $hr-border-color;
+  background: linear-gradient(180deg, $bg-dark 0%, darken($bg-dark, 3%) 100%);
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 0;
+  padding: 3rem 2rem 1.5rem;
+  position: relative;
 
-  @include large {
-    font-size: 1rem;
+  // Top glass edge
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba($primary-light, 0.3), transparent);
   }
+}
 
-  @include medium {
-    font-size: 1rem;
-  }
+.footer-container {
+  max-width: 64rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
 
   @include small {
-    font-size: 0.9rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 
-.site-footer-owner {
-  display: block;
-  font-weight: bold;
+.footer-section {
+  h4 {
+    color: $text-light;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  a {
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    padding: 0.2rem 0;
+    transition: color $transition-fast, transform $transition-fast;
+    position: relative;
+
+    &:hover {
+      color: $accent;
+      text-decoration: none;
+      transform: translateX(4px);
+    }
+  }
 }
 
-.site-footer-credits {
-  color: $blockquote-text-color;
+.footer-bottom {
+  max-width: 64rem;
+  margin: 2rem auto 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.4);
+
+  @include small {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  a {
+    color: rgba(255, 255, 255, 0.5);
+    &:hover {
+      color: $accent;
+      text-decoration: none;
+    }
+  }
 }

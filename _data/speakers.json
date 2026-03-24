@@ -1,0 +1,86 @@
+{
+  "keynote": [
+    {
+      "name": "Elliott Ash",
+      "url": "https://elliottash.com/",
+      "image": "assets/speaker_images/elliott_ash.png",
+      "designation_title": "Associate Professor",
+      "designation_org": "ETH Zurich",
+      "designation_country": "Switzerland",
+      "talk_title": "AI, Preferences, and Economics",
+      "abstract": "The under-appreciated secret ingredient in modern AI systems is that they are not just models of language -- they are models of human preferences. That gives us insight into when and why aligned LLMs will be useful tools in the economy and for social-science research. It also opens the door for a productive synergy between AI design and a science of human preferences -- i.e., economics."
+    },
+    {
+      "name": "Tanmoy Chakraborty",
+      "url": "https://tanmoychak.com/",
+      "image": "assets/speaker_images/tanmay.png",
+      "designation_title": "Associate Professor",
+      "designation_org": "IIT Delhi",
+      "designation_country": "India",
+      "talk_title": "Towards Enhanced Conversational Dynamics for Effective Virtual Therapist-Assistive Counseling",
+      "abstract": "The increasing demand for digital healthcare, coupled with current infrastructure limitations, requires digital therapeutic interventions. My talk will focus on the design and implementation of Virtual Mental Health Assistants modules that serve as therapist-assistive mechanisms to automate their complex work cycle. We work on building novel LLM-based methods for dialogue understanding, summarization, and generation, and our research captures the intricacies of therapeutic communication while incorporating signs into human behavior analysis. In support of this, we also develop datasets and resources, many of which are first-of-its-kind, including HOPE, MEMO, MENTAL-TRUST, MentalCLOUDS, and BeCOPe, all of which are available for research purposes."
+    },
+    {
+      "name": "Tommaso Caselli",
+      "url": "https://www.rug.nl/staff/t.caselli/?lang=en",
+      "image": "assets/speaker_images/tommaso.png",
+      "designation_title": "Assistant Professor",
+      "designation_org": "University of Groningen",
+      "designation_country": "Netherlands",
+      "talk_title": "Framing Perspectives on Environmental Sustainability",
+      "abstract": "Communication is at the core of every human activity. The way we speak, or narrate something, activates (consciously or unconsciously) perspectives on things that happen in the world. These perspectives are not simple points of view but they encode and influence our perception of events and phenomena. A ubiquitous device to encode and convey such perspectives is framing. The difference between \"climate change\" and \"climate crisis\" is primarily a difference in frames that these words activate in the minds of receivers: a \"change\" is more neutral and less urgent than a \"crisis\". In this talk, I will present and discuss ongoing research on frame activation and generation at the lexical level concerning the food transition and parliamentary debates on climate change in the European Union."
+    },
+    {
+      "name": "Aparna Taneja",
+      "url": "https://research.google/people/106890/",
+      "image": "assets/speaker_images/aparna.jpeg",
+      "designation_title": "Research Scientist",
+      "designation_org": "Google Research",
+      "designation_country": "India",
+      "talk_title": "Using AI to assist in improving maternal and child health outcomes in underserved communities in India",
+      "abstract": "The widespread availability of cell phones has enabled non-profits to deliver critical health information to their beneficiaries in a timely manner. However, significant fraction of beneficiaries drop out of the program and non-profits often have limited health-worker resources to place crucial service calls for live interaction with beneficiaries to prevent such engagement drops. To assist non-profits in optimizing this limited resource, we developed a Restless Multi-Armed Bandits (RMABs) system. The RMAB system was evaluated in collaboration with an NGO via a real-world service quality improvement study and showed a 30% reduction in engagement drops. This has inspired a lot of research from the team in the broad area of limited resource allocation using RMABs. More recently, we have presented efforts towards a foundation model for RMABs, additionally empowered by LLMs to offer more flexibility and adaptability to changing goals."
+    }
+  ],
+  "invited": [
+    {
+      "name": "M R Hasan",
+      "url": "https://mrhasan-ai.github.io/",
+      "image": "assets/speaker_images/hassan.png",
+      "designation_title": "Early Career Researcher",
+      "designation_org": "University of Nebraska-Lincoln",
+      "designation_country": "USA",
+      "talk_title": "Bridging Modalities, Improving Lives: How Multimodal AI Systems Can Enhance Educational Equity and Outcomes",
+      "abstract": "This talk explores the transformative potential of multimodal AI systems, integrating natural language processing and vision capabilities, to advance educational interventions and improve learning outcomes. At the Human-First Artificial Intelligence Lab (HAL 2.0), our research on modeling complex longitudinal experiential (LE) data, capturing students' cognitive, emotional, and behavioral dynamics over time, has highlighted significant challenges in achieving generalizable insights. Drawing from our NSF-supported research on the \"Messages From A Future You\" AI system, which initially explored methods like large language models for analyzing noisy, sparse, and heterogeneous student data collected throughout an academic semester, we encountered limitations in generalizing predictive models across student cohorts and contexts. To overcome these fundamental challenges inherent in LE data modeling, we developed a novel multimodal framework, leveraging vision-language models. By transforming LE data into complementary textual narratives and visual representations, our approach is specifically designed to capture intricate structural dynamics and overcome data limitations, enabling forecasting of learning outcomes and behavioral attributes with greater precision and robust generalizability. This multimodal AI framework shows promising potential for delivering personalized interventions informed by the nuanced variations in students' learning experiences, thereby enhancing educational equity and outcomes, while establishing a foundational paradigm that can extend beyond education to healthcare, mental wellness, and other domains where understanding complex human experiences is essential for positive social impact."
+    },
+    {
+      "name": "Shivani Kumar",
+      "url": "https://www.si.umich.edu/people/shivani-kumar",
+      "image": "assets/speaker_images/shivani.png",
+      "designation_title": "Postdoctoral Fellow",
+      "designation_org": "University of Michigan",
+      "designation_country": "USA",
+      "talk_title": "Are Rules Meant to be Broken? Understanding Multilingual Moral Reasoning as a Computational Pipeline with UniMoral",
+      "abstract": "Moral reasoning is fundamental to human decision-making, influencing social interactions, policy-making, and ethical AI development. However, its computational study remains fragmented, with existing NLP research relying on disparate datasets and isolated tasks. To advance NLP for social good, we introduce UniMoral, a multilingual dataset designed to facilitate the development of AI systems that understand and navigate ethical dilemmas in diverse cultural settings. UniMoral integrates psychologically grounded and real-world moral dilemmas from social media, annotated with action choices, ethical principles, contributing factors, and consequences, alongside annotators' moral and cultural profiles. Recognizing the cultural relativity of moral reasoning, UniMoral spans six languages—Arabic, Chinese, English, Hindi, Russian, and Spanish—enabling cross-cultural analysis. We assess its impact through benchmark evaluations of three large language models (LLMs) across four tasks: action prediction, moral typology classification, factor attribution analysis, and consequence generation. Our findings highlight that while LLMs can leverage implicit moral contexts, significant challenges remain in ensuring these models reason ethically across diverse sociocultural landscapes. UniMoral lays the foundation for more equitable, context-aware AI systems, fostering NLP applications that promote fairness, inclusivity, and ethical awareness in automated decision-making."
+    },
+    {
+      "name": "Shubham Kumar Nigam",
+      "url": "https://sites.google.com/view/shubhamkumarnigam/",
+      "image": "assets/speaker_images/shubham.png",
+      "designation_title": "PhD Student",
+      "designation_org": "Indian Institute of Technology  Kanpur",
+      "designation_country": "India",
+      "talk_title": "NyayaSutra: Enabling Reliable and Interpretable Legal Judgment through Structured Thinking",
+      "abstract": "In high-stakes domains like law, opaque AI models pose a significant barrier to real-world adoption. Legal professionals demand not just accurate predictions but interpretable reasoning paths that align with judicial logic. While explainability techniques have emerged to address this, they often provide post-hoc justifications rather than surfacing the actual reasoning that led to a decision, leading to a growing gap between model outputs and human trust.\n\nNyayaSutra introduces an interpretable and reliable AI framework for legal judgment prediction and reasoning, tailored to the Indian judiciary. It leverages a structured thinking paradigm, breaking down judgments into rhetorical segments, Facts, Issues, Arguments, Reasoning, and Decision, to ensure transparency and traceability. The system employs hybrid legal retrieval, instruction-tuned LLMs trained on annotated Indian judgments, and GRPO-based optimization using structured \"thinking tokens.\"\n\nBy making legal reasoning interpretable from the ground up, NyayaSutra empowers legal professionals, researchers, and policymakers with factual, explainable, and trustworthy AI outputs, contributing meaningfully to the larger vision of NLP for Social Good."
+    },
+    {
+      "name": "Vivek Kumar",
+      "url": "https://www.unibw.de/aiml/personen/vivek-k",
+      "image": "assets/speaker_images/vivek.jpeg",
+      "designation_title": "Senior Researcher at the Chair of Open Source Intelligence",
+      "designation_org": "INF 7 Institute for Data Security",
+      "designation_country": "Germany",
+      "talk_title": "Towards Empathetic AI: Safe AI Practice in Behavioral Therapy",
+      "abstract": "While Large Language Models (LLMs) have demonstrated remarkable capabilities in generating human-like text, their reliable application in low-resource domains such as mental health remains limited. This challenge primarily arises from the domain's inherent complexity and the scarcity of high-quality, labeled data, which can contribute to bias, hallucinations, and a lack of emotional nuance. This work presents a mixed-methods approach to evaluate the efficacy of LLMs in psychotherapy, specifically in generating accurate summaries of Motivational Interviewing (MI) dialogues. The experimental design explores two summarization levels: (i) full-session and (ii) utterance-level MI summaries. The work evaluates 13 state-of-the-art (SOTA) large language models (LLMs) alongside classical natural language processing (NLP) methods for plausible in-context data generation. The work introduces a novel two-stage evaluation scheme grounded in the Motivational Interviewing Treatment Integrity (MITI) framework, assessing key components such as evocation, collaboration, autonomy, direction, empathy, and non-judgmental attitude. These criteria are used to evaluate semantic drift, hallucinations, MI adherence, fluency, and contextual coherence.\nAdditionally, the study benchmarks LLMs on NLP downstream tasks, including automated annotation and multi-class, multi-label classification. The findings offer insights into the capacity of LLMs to model complex psychological constructs and provide best practices for mitigating semantic drift in therapeutic contexts. This study also contributes a publicly available dataset comprising 1,764 MI dialogues—both low- and high-quality—encompassing approximately 81,000 therapist-client talk turns."
+    }
+  ]
+}

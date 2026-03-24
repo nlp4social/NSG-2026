@@ -1,0 +1,78 @@
+{
+  "advisors": [
+    {
+      "name": "Iryna Gurevych",
+      "image": "assets/organizer_images/iryna_gurevych.jpg",
+      "url": "https://www.informatik.tu-darmstadt.de/ukp/ukp_home/head_ukp/index.en.jsp",
+      "role": "Professor",
+      "affiliation": "TU Darmstadt; Adjunct Professor, MBZUAI, UAE; Affiliated Professor, INSAIT, Bulgaria"
+    }
+  ],
+  "main": [
+    {
+      "name": "Tulika Saha",
+      "image": "assets/organizer_images/ts.png",
+      "url": "https://sahatulika15.github.io/",
+      "role": "Assistant Professor, IIIT Bangalore, India",
+      "affiliation": "Honorary Lecturer, University of Liverpool, UK"
+    },
+    {
+      "name": "Procheta Sen",
+      "image": "assets/organizer_images/ps.jpg",
+      "url": "https://procheta.github.io/",
+      "role": "Assistant Professor",
+      "affiliation": "University of Liverpool, UK"
+    },
+    {
+      "name": "Mamta",
+      "image": "assets/organizer_images/mamta.jpg",
+      "url": "https://mamtanlp.github.io/cv/",
+      "role": "Research Associate",
+      "affiliation": "King's College London"
+    },
+    {
+      "name": "Oana Cocarascu",
+      "image": "assets/organizer_images/oana_cocarascu.jpg",
+      "url": "https://scholar.google.com/citations?user=TrgGMO0AAAAJ&hl=en",
+      "role": "Senior Lecturer",
+      "affiliation": "King's College London"
+    },
+    {
+      "name": "Hassan Alhuzali",
+      "image": "assets/organizer_images/hassan_alhuzali.jpg",
+      "url": "https://hasanhuz.github.io/",
+      "role": "Assistant Professor",
+      "affiliation": "Umm Al-Qura University"
+    },
+    {
+      "name": "Tanmoy Chakraborty",
+      "image": "assets/speaker_images/tanmay.png",
+      "url": "https://tanmoychak.com/",
+      "role": "Associate Professor",
+      "affiliation": "IIT Delhi, India"
+    },
+    {
+      "name": "Danushka Bollegala",
+      "image": "assets/organizer_images/db.png",
+      "url": "https://danushka.net/",
+      "role": "Professor",
+      "affiliation": "University of Liverpool, UK"
+    },
+    {
+      "name": "Katie Atkinson",
+      "image": "assets/organizer_images/katie_atkinson.jpg",
+      "url": "http://www.csc.liv.ac.uk/~katie",
+      "role": "Professor of Computer Science",
+      "affiliation": "University of Liverpool"
+    }
+  ],
+  "volunteers": [
+    {
+      "name": "C Viswanath",
+      "image": "assets/organizer_images/viswanath.jpg",
+      "url": "#",
+      "role": "Research Scholar",
+      "affiliation": "IIIT Bangalore, India"
+    }
+  ]
+}

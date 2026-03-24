@@ -1,0 +1,48 @@
+[
+  {
+    "date": "15th August",
+    "sessions": [
+      {
+        "time": "11:00 AM – 12:00 PM",
+        "description": "<strong>Keynote Talk 1:</strong> Using AI to assist in improving maternal and child health outcomes in underserved communities in India<br><strong>Speaker:</strong> Aparna Taneja"
+      },
+      {
+        "time": "12:30 PM – 12:50 PM",
+        "description": "<strong>Invited Talk 1:</strong> Are Rules Meant to be Broken? Understanding Multilingual Moral Reasoning as a Computational Pipeline with UniMoral<br><strong>Speaker:</strong> Shivani Kumar"
+      },
+      {
+        "time": "12:50 PM – 13:10 PM",
+        "description": "<strong>Invited Talk 2:</strong> NyayaSutra: Enabling Reliable and Interpretable Legal Judgment through Structured Thinking<br><strong>Speaker:</strong> Shubham Kumar"
+      },
+      {
+        "time": "13:30 PM – 14:30 PM",
+        "description": "<strong>Keynote Talk 2:</strong> Framing Perspectives on Environmental Sustainability<br><strong>Speaker:</strong> Tommaso Caselli"
+      },
+      {
+        "time": "14:45 PM – 15:05 PM",
+        "description": "<strong>Invited Talk 3:</strong> Bridging Modalities, Improving Lives: How Multimodal AI Systems Can Enhance Educational Equity and Outcomes<br><strong>Speaker:</strong> Mohammad Rashedul Hasan"
+      },
+      {
+        "time": "15:05 PM – 15:25 PM",
+        "description": "<strong>Invited Talk 4:</strong> Towards Empathetic AI: Safe AI Practice in Behavioral Therapy<br><strong>Speaker:</strong> Vivek Kumar"
+      }
+    ]
+  },
+  {
+    "date": "16th August",
+    "sessions": [
+      {
+        "time": "10:00 AM – 11:00 AM",
+        "description": "<strong><s>Keynote Talk 2:</s></strong> <s>AI, Preferences, and Economics</s><br><strong>Speaker:</strong><s>Elliott Ash</s>Cancelled"
+      },
+      {
+        "time": "11:30 AM – 12:30 PM",
+        "description": "<strong>Keynote Talk 3:</strong> Towards Enhanced Conversational Dynamics for Effective Virtual Therapist-Assistive Counseling<br><strong>Speaker:</strong> Tanmoy Chakraborty"
+      },
+      {
+        "time": "12:30 AM – 12:45 PM",
+        "description": "<strong>Closing Remarks:</strong> Professor Danushka Bollegala, University of Liverpool, Amazon Scholar"
+      }
+    ]
+  }
+]

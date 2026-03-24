@@ -1,23 +1,67 @@
 // Breakpoints
 $large-breakpoint: 64em !default;
 $medium-breakpoint: 42em !default;
+$mobile-breakpoint: 48em !default;
 
-// Headers
-$header-heading-color: #fff !default;
-$header-bg-color: #159957 !default;
-$header-bg-color-secondary: #155799 !default;
+// Primary palette
+$primary: #0d4f5c !default;
+$primary-light: #1a7a8a !default;
+$primary-dark: #093a44 !default;
+$accent: #e8b931 !default;
+$accent-hover: #d4a52a !default;
+
+// Backgrounds
+$bg-light: #f0f4f8 !default;
+$bg-card: #ffffff !default;
+$bg-dark: #0b1d25 !default;
 
 // Text
-$section-headings-color: #159957 !default;
-$body-text-color: #606c71 !default;
-$body-link-color: #1e6bb8 !default;
-$blockquote-text-color: #819198 !default;
+$text-primary: #1a1a2e !default;
+$text-secondary: #5a6474 !default;
+$text-light: #ffffff !default;
+
+// Legacy compatibility tokens
+$header-heading-color: $text-light !default;
+$header-bg-color: $primary !default;
+$header-bg-color-secondary: $primary-dark !default;
+$section-headings-color: $primary !default;
+$body-text-color: $text-primary !default;
+$body-link-color: $primary-light !default;
+$blockquote-text-color: $text-secondary !default;
 
 // Code
-$code-bg-color: #f3f6fa !default;
-$code-text-color: #567482 !default;
+$code-bg-color: #f0f4f8 !default;
+$code-text-color: #3d5a6e !default;
 
 // Borders
 $border-color: #dce6f0 !default;
-$table-border-color: #e9ebec !default;
-$hr-border-color: #eff0f1 !default;
+$table-border-color: #e2e8f0 !default;
+$hr-border-color: #e2e8f0 !default;
+
+// Shadows
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06) !default;
+$shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08) !default;
+$shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12) !default;
+$shadow-glow: 0 0 30px rgba($primary-light, 0.15) !default;
+
+// Border radius
+$radius-sm: 8px !default;
+$radius-md: 12px !default;
+$radius-lg: 20px !default;
+$radius-full: 50% !default;
+
+// Glass tokens
+$glass-bg: rgba(255, 255, 255, 0.55) !default;
+$glass-bg-hover: rgba(255, 255, 255, 0.72) !default;
+$glass-border: rgba(255, 255, 255, 0.35) !default;
+$glass-border-hover: rgba(255, 255, 255, 0.55) !default;
+$glass-blur: 20px !default;
+$glass-dark-bg: rgba(11, 29, 37, 0.6) !default;
+$glass-dark-border: rgba(255, 255, 255, 0.08) !default;
+
+// Animation
+$ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1) !default;
+$ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1) !default;
+$transition-fast: 0.2s $ease-out-expo !default;
+$transition-med: 0.35s $ease-out-expo !default;
+$transition-slow: 0.5s $ease-out-expo !default;

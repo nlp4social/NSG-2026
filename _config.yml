@@ -1,10 +1,10 @@
-title: 3rd Symposium on NLP for Social Good 2025
-# description:  2025
+title: 4th Workshop on Foundation Models for Social Good
+# description:  2026
 timezone: United Kingdom/Liverpool
 # logo: assets/css/NSG.png
 
 navigation:
-  Home: "/NSG"
+  Home: "/"
   Call for Papers: "cfp.html"
   Accepted Papers: "papers.html"
   Speakers: "speakers.html"
