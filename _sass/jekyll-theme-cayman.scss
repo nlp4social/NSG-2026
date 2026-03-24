@@ -784,12 +784,18 @@ a {
 // ============================================================
 .speaker-flex,
 .organizer-flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin: 1.5rem 0;
+  
+  @include medium {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include small {
+    grid-template-columns: 1fr;
+  }
 }
 
 .speaker-card,
@@ -800,7 +806,6 @@ a {
   box-shadow: $shadow-md;
   padding: 1.75rem 1.25rem 1.25rem;
   width: 100%;
-  max-width: 320px;
   transition: transform $transition-med, box-shadow $transition-med, background $transition-med, border-color $transition-med;
   position: relative;
   overflow: hidden;
