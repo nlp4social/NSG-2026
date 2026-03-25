@@ -1,4 +1,4 @@
-title: 4th Workshop on Foundation Models for Social Good
+title: Workshop on Foundation Models for Social Good
 # description:  2026
 timezone: United Kingdom/Liverpool
 baseurl: "/NSG-2026"
@@ -7,7 +7,6 @@ baseurl: "/NSG-2026"
 navigation:
   Home: "/"
   Call for Papers: "cfp.html"
-  Accepted Papers: "papers.html"
   Speakers: "speakers.html"
   Programme: "programme.html"
   Organizers: "organizers.html"

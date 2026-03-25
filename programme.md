@@ -8,6 +8,9 @@ nav_order: 5
 
 ## Schedule
 
+<p style="text-align: center; font-size: 1.2rem; font-style: italic; margin: 2rem 0;">To Be Announced (TBA)</p>
+
+<!--
 {% for day in site.data.programme %}
 ### **{{ day.date }}**
 
@@ -31,5 +34,6 @@ nav_order: 5
 ---
 
 {% endfor %}
+-->
 
 <!-- [back](./) -->

@@ -5,7 +5,7 @@
       "image": "assets/organizer_images/iryna_gurevych.jpg",
       "url": "https://www.informatik.tu-darmstadt.de/ukp/ukp_home/head_ukp/index.en.jsp",
       "role": "Professor",
-      "affiliation": "TU Darmstadt; Adjunct Professor, MBZUAI, UAE; Affiliated Professor, INSAIT, Bulgaria"
+      "affiliation": "TU Darmstadt, Germany"
     }
   ],
   "main": [
@@ -28,21 +28,21 @@
       "image": "assets/organizer_images/mamta.jpg",
       "url": "https://mamtanlp.github.io/cv/",
       "role": "Research Associate",
-      "affiliation": "King's College London"
+      "affiliation": "King's College London, UK"
     },
     {
       "name": "Oana Cocarascu",
       "image": "assets/organizer_images/oana_cocarascu.jpg",
       "url": "https://scholar.google.com/citations?user=TrgGMO0AAAAJ&hl=en",
       "role": "Senior Lecturer",
-      "affiliation": "King's College London"
+      "affiliation": "King's College London, UK"
     },
     {
       "name": "Hassan Alhuzali",
       "image": "assets/organizer_images/hassan_alhuzali.jpg",
       "url": "https://hasanhuz.github.io/",
       "role": "Assistant Professor",
-      "affiliation": "Umm Al-Qura University"
+      "affiliation": "Umm Al-Qura University, Saudi Arabia"
     },
     {
       "name": "Tanmoy Chakraborty",
@@ -63,7 +63,7 @@
       "image": "assets/organizer_images/katie_atkinson.jpg",
       "url": "http://www.csc.liv.ac.uk/~katie",
       "role": "Professor of Computer Science",
-      "affiliation": "University of Liverpool"
+      "affiliation": "University of Liverpool, UK"
     }
   ],
   "volunteers": [
