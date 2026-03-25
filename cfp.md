@@ -7,23 +7,36 @@ title: Call For Papers
 
 # Call For Papers
 
-NSG-2026 invites authors to submit papers on research that leverages Natural Language Processing (NLP) techniques to address a wide range of social issues, including but not limited to education, law, healthcare, climate change, and any of the United Nations Sustainable Development Goals (SDGs).
+The workshop on Foundation Models for Social Good (FMSG) is a novel effort aimed at enabling NLP and ML researchers and scholars from interdisciplinary fields to think and discuss the societal implications of their work for solving humanitarian and environmental challenges. 
 
-## Topics of Interest
+By fostering collaboration across academia, industry, and civil society, we seek to maximize impact in addressing challenges in public health, environment and society, accessibility, crisis response, and beyond.
 
-Topics of interest include, but are not limited to:
+## Workshop Structure & Submissions
+
+We propose to conduct a one-day workshop in a hybrid mode. We will invite both ARR-based submissions and newly submitted manuscripts on the chairing-tool platform where each submitted paper will receive at least 3 reviews. Depending on the number of accepted submissions, papers will be presented in oral and/or poster sessions. 
+
+The topics of interest for the submission (**four-pages short papers or eight-pages long papers**) in the workshop are focused on two primary themes, which include but are not limited to the following areas:
+
+### 1. Development of Foundational Models for Social Good
 
 <ul>
-  <li>Applications and solutions addressing the NLP for Social Good (NSG) theme.</li>
-  <li>Natural Language Interfaces and Interaction: design and implementation of natural language interfaces, user studies with human participants on NSG topics.</li>
-  <li>Large Language Models &amp; Vision Language Models: opportunities and risks of using LLMs and VLMs in NSG.</li>
-  <li>Innovative and responsible use of NLP for social good.</li>
-  <li>Explainable Artificial Intelligence (XAI): interpretability and transparency in NSG applications.</li>
-  <li>Corpus/Dataset Analysis: collection, creation, or analysis of datasets relevant to NSG topics.</li>
-  <li>Multi-modal solutions addressing the NSG theme.</li>
-  <li>Unique contributions to any of the 17 SDGs using NLP.</li>
+  <li><strong>Responsible Development of Foundation Models:</strong> We welcome research on the responsible use of foundation models, exploring their opportunities, challenges, and methods for interpreting their inner workings.</li>
+  <li><strong>Foundation Models for Low Resource Language:</strong> To ensure equitable access to the enormous potential of foundation models, they must be available across all languages. We invite works on developing efficient foundation models for low-resource languages.</li>
+  <li><strong>Small Scale Foundation Models:</strong> Foundation models typically demand massive datasets and large-scale architectures, making them difficult to build and deploy across diverse systems. We encourage work on developing efficient, small-scale foundation models that are more accessible and usable for everyone.</li>
+  <li><strong>Multi-modality in Foundation Models:</strong> Multi-modality is vital for Foundation models, as it can integrate various data forms like text, images, audio, and video to create more effective, context-aware solutions. This approach helps address real-world challenges and better serves diverse communities. Thus, we also invite research work on building multi-modal foundation models.</li>
+  <li><strong>Efficient Inference of LLMs:</strong> Reducing inference time is critical for deploying large language models (LLMs) in real-world applications, where latency, cost, and scalability directly affect usability. We encourage work related to model compression techniques such as quantization (e.g., 8-bit or 4-bit weights), pruning, decoding techniques and knowledge distillation to reduce computation and memory footprint while preserving performance.</li>
 </ul>
 
-For more information, please contact the organizers or visit our website.
+### 2. Deployment of Foundational Models for Social Good
 
-<!-- [back](./) -->
+<ul>
+  <li><strong>Innovative Applications of Foundation Models:</strong> Considering the 17 UN Sustainable Development Goals (SDGs), we invite research contributions that apply foundation models in novel and underexplored domains.</li>
+</ul>
+
+<div style="background: rgba(13, 79, 92, 0.1); border-left: 4px solid #0d4f5c; padding: 1rem; margin: 2rem 0; border-radius: 4px;">
+  <strong>Note:</strong> The best paper in this workshop will be rewarded by a cash prize sponsored by the AI startup <em>Zeuron.AI</em> working in the mental health space.
+</div>
+
+## Diversity and Inclusion
+
+We aim to support diversity and inclusion in every possible way. To ensure diversity, FMSG will invite researchers from a range of fields including computer science, linguistics, social sciences, and law with speakers representing both academia and industry. The organization team and potential invited speakers represent diverse communities in terms of gender, demographic representation, levels of seniority, and research expertise. Our workshop aims to be a platform where all voices are valued, and diverse perspectives are integrated into the discussions.
