@@ -31,5 +31,5 @@ The topics of interest for the submission (**four-pages short papers or eight-pa
 </ul>
 
 <div style="background: rgba(13, 79, 92, 0.1); border-left: 4px solid #0d4f5c; padding: 1rem; margin: 2rem 0; border-radius: 4px;">
- The SUbmission link is <a href="https://openreview.net/group?id=ijcai.org/IJCAI-ECAI/2026/Workshop/FSG"> here. </a>
+ The Submission link is <a href="https://openreview.net/group?id=ijcai.org/IJCAI-ECAI/2026/Workshop/FSG"> here. </a>
 </div>
