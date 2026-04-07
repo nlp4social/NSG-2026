@@ -7,7 +7,7 @@ title: Call For Papers
 
 # Call For Papers
 
-We invite both ARR-based submissions and newly submitted manuscripts on the Openreview platform where each submitted paper will receive at least 3 reviews. Depending on the number of accepted submissions, papers will be presented in oral and/or poster sessions. 
+We invite both ARR-based submissions and newly submitted manuscripts on the Openreview platform where each submitted paper will receive at least 3 reviews. Depending on the number of accepted submissions, papers will be presented in oral and/or poster sessions. Papers should be submitted in [ACL format](https://www.overleaf.com/project/69d4e22f3cdeeca88beb162e). 
 
 The topics of interest for the submission (**four-pages short papers or eight-pages long papers**) in the workshop are focused on two primary themes, which include but are not limited to the following areas:
 
