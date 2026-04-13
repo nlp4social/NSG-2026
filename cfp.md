@@ -7,7 +7,7 @@ title: Call For Papers
 
 # Call For Papers
 
-We invite both ARR-based submissions and newly submitted manuscripts on the Openreview platform where each submitted paper will receive at least 3 reviews. Depending on the number of accepted submissions, papers will be presented in oral and/or poster sessions. Papers should be submitted in [ACL format](https://www.overleaf.com/project/69d4e22f3cdeeca88beb162e). 
+We invite both ARR-based submissions and newly submitted manuscripts on the Openreview platform where each submitted paper will receive at least 3 reviews. Depending on the number of accepted submissions, papers will be presented in oral and/or poster sessions. Papers should be submitted in [ACL format](https://github.com/acl-org/acl-style-files). 
 
 # Important Dates
 Submission Deadline: **5th May 2026, AOE**
