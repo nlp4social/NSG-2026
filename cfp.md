@@ -12,9 +12,9 @@ We invite both ARR-based submissions and newly submitted manuscripts on the Open
 # Important Dates
 Submission Deadline: ~~5th May 2026, AOE~~ **15th May 2026, AOE**
 
-Notification Deadline: **31st May 2026**
+Notification Deadline:  ~~31st May 2026, AOE~~ **5th June 2026**
 
-Camera-ready Submission Deadline: **5th June 2026**
+Camera-ready Submission Deadline: **10th June 2026**
 
 The topics of interest for the submission (**four-pages short papers or eight-pages long papers**) in the workshop are focused on two primary themes, which include but are not limited to the following areas:
 
