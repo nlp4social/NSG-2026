@@ -38,37 +38,7 @@ nav_order: 4
   </div>
   </div>
     
- <!--   <div class="zhijing-abstract speaker-abstract" style="text-align: left; display: none; margin-top: 1.5rem; width: 100%; cursor: default;" onclick="event.stopPropagation();">
-      <strong>About</strong><br>
-      An incoming Assistant Professor at University of Toronto and Research Scientist at the Max Planck Institute with Bernhard Schölkopf, they are the founder of EuroSafeAI and hold affiliations with Center for Human-Compatible AI (CHAI), the Vector Institute, the Schwartz Reisman Institute for Technology and Society, and ELLIS.<br><br>
-      Their research focuses on Large Language Models, Causal Inference, and Responsible AI, with contributions to causal reasoning, multi-agent systems, interpretability, and AI safety. They are a recipient of the ELLIS PhD Award, multiple Rising Star recognitions, and Best Paper Awards at NeurIPS 2024 Workshops, with work featured in WIRED and MIT News.<br><br>
-      <strong>Links</strong><br>
-      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 0.5rem;">
-        <a href="https://zhijing-jin.com/home/" target="_blank" rel="noopener" style="font-weight: 500;">Website</a> &bull;
-        <a href="https://x.com/ZhijingJin" target="_blank" rel="noopener" style="font-weight: 500;">𝕏 (Twitter)</a> &bull;
-        <a href="https://scholar.google.com/citations?user=Mdr6wjUAAAAJ" target="_blank" rel="noopener" style="font-weight: 500;">Google Scholar</a> &bull;
-        <a href="https://bsky.app/profile/zhijingjin.bsky.social" target="_blank" rel="noopener" style="font-weight: 500;">BlueSky</a>
-      </div>
-    </div>
-  </div>
-</div>
--->
-<!--
-<div class="speaker-flex">
-  {% for speaker in site.data.speakers.keynote %}
-  <div class="speaker-card">
-    <img src="{{ speaker.image }}" alt="{{ speaker.name }}" class="speaker-img"/>
-    <div class="speaker-name"><a href="{{ speaker.url }}" target="_blank" rel="noopener">{{ speaker.name }}</a></div>
-    <div class="speaker-designation"><span style="font-weight:600; color:#194e6a;">{{ speaker.designation_title }}</span><br><span style="font-style:italic; color:#333;">{{ speaker.designation_org }}</span><br><span style="color:black">{{ speaker.designation_country }}</span></div>
-    <button class="speaker-toggle-btn" onclick="toggleAbstract(this)">Talk Abstract</button>
-    <div class="speaker-abstract">
-      <strong>{{ speaker.talk_title }}</strong><br>
-      {{ speaker.abstract | newline_to_br }}
-    </div>
-  </div>
-  {% endfor %}
-</div>
--->
+
 
 ----
 ## Invited Speakers
