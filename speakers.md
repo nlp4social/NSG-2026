@@ -21,8 +21,7 @@ nav_order: 4
         </div>
       </div>
     </div>
-
-<div class="single-card-flex">
+  </div>
   <div class="speaker-card" style="cursor: pointer; padding: 2rem; display: flex; flex-direction: column; align-items: center; max-width: 550px;" onclick="toggleZhijing(this)">
     <div style="display: flex; align-items: center; gap: 1.5rem; text-align: left; width: 100%;">
       <img src="assets/speaker_images/ZhijingJin.webp" alt="Zhijing Jin" class="speaker-img" style="width: 110px; height: 110px; flex-shrink: 0; margin: 0;"/>
@@ -36,6 +35,8 @@ nav_order: 4
         </div>
       </div>
     </div>
+  </div>
+  </div>
     
     <div class="zhijing-abstract speaker-abstract" style="text-align: left; display: none; margin-top: 1.5rem; width: 100%; cursor: default;" onclick="event.stopPropagation();">
       <strong>About</strong><br>
