@@ -38,7 +38,7 @@ nav_order: 4
   </div>
   </div>
     
-    <div class="zhijing-abstract speaker-abstract" style="text-align: left; display: none; margin-top: 1.5rem; width: 100%; cursor: default;" onclick="event.stopPropagation();">
+ <!--   <div class="zhijing-abstract speaker-abstract" style="text-align: left; display: none; margin-top: 1.5rem; width: 100%; cursor: default;" onclick="event.stopPropagation();">
       <strong>About</strong><br>
       An incoming Assistant Professor at University of Toronto and Research Scientist at the Max Planck Institute with Bernhard Schölkopf, they are the founder of EuroSafeAI and hold affiliations with Center for Human-Compatible AI (CHAI), the Vector Institute, the Schwartz Reisman Institute for Technology and Society, and ELLIS.<br><br>
       Their research focuses on Large Language Models, Causal Inference, and Responsible AI, with contributions to causal reasoning, multi-agent systems, interpretability, and AI safety. They are a recipient of the ELLIS PhD Award, multiple Rising Star recognitions, and Best Paper Awards at NeurIPS 2024 Workshops, with work featured in WIRED and MIT News.<br><br>
@@ -52,7 +52,7 @@ nav_order: 4
     </div>
   </div>
 </div>
-
+-->
 <!--
 <div class="speaker-flex">
   {% for speaker in site.data.speakers.keynote %}
@@ -92,7 +92,7 @@ nav_order: 4
 </div>
 -->
 
-<script>
+<!--<script>
 function toggleZhijing(card) {
   var abs = card.querySelector('.zhijing-abstract');
   if (abs.style.display === "block") {
@@ -112,4 +112,4 @@ function toggleAbstract(btn) {
     btn.textContent = "Hide Abstract";
   }
 }
-</script>
+</script>-->
