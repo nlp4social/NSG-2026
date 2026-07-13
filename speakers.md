@@ -9,7 +9,7 @@ nav_order: 4
 ## Keynote Speakers
 
 <div class="single-card-flex">
-  <div class="speaker-card" style="cursor: pointer; padding: 2rem; display: flex; flex-wrap: wrap; flex-direction: column; align-items: center; max-width: 550px;" onclick="toggleZhijing(this)">
+  <div class="speaker-card" style="cursor: pointer; padding: 2rem; display: flex; flex-direction: row; align-items: center; max-width: 550px;" onclick="toggleZhijing(this)">
     <div style="display: flex; align-items: center; gap: 1.5rem; text-align: left; width: 100%;">
       <img src="assets/speaker_images/milind_tambe.jpg" alt="Zhijing Jin" class="speaker-img" style="width: 110px; height: 110px; flex-shrink: 0; margin: 0;"/>
       <div>
@@ -22,7 +22,7 @@ nav_order: 4
       </div>
     </div>
   </div>
-    <div class="speaker-card" style="cursor: pointer; padding: 2rem; display: flex; flex-direction: column; align-items: center; max-width: 550px;" onclick="toggleLucie(this)">
+    <div class="speaker-card" style="cursor: pointer; padding: 2rem; display: flex; flex-direction: row; align-items: center; max-width: 550px;" onclick="toggleLucie(this)">
     <div style="display: flex; align-items: center; gap: 1.5rem; text-align: left; width: 100%;">
       <img src="assets/speaker_images/lucie.jpg" alt="Lucie Flek" class="speaker-img" style="width: 110px; height: 110px; flex-shrink: 0; margin: 0;"/>
       <div>
