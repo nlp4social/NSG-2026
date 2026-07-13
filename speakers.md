@@ -17,7 +17,9 @@ nav_order: 4
           <a href="https://zhijing-jin.com/home/" target="_blank" rel="noopener" style="text-decoration: none;" onclick="event.stopPropagation();">Milind Tambe</a>
         </div>
         <div class="speaker-designation" style="margin-top: 0.5rem; font-size: 1rem;">
-          <span style="font-weight:600; color:#194e6a;">Professor of Computer Science at Harvard University and Director for “AI for Social Good” at Google Research</span><br>
+          <span style="font-weight:600; color:#194e6a;">Professor</span><br>
+          <span style="font-style:italic; color:#333;">Harvard University</span> <br>
+           <span style="font-style:italic; color:#333;">Director for “AI for Social Good” at Google Research</span>
         </div>
       </div>
     </div>
