@@ -22,7 +22,7 @@ nav_order: 4
       </div>
     </div>
   </div>
-    <div class="speaker-card" style="cursor: pointer; padding: 2rem; display: flex; flex-direction: column; align-items: center; max-width: 550px;" onclick="toggleZhijing(this)">
+    <div class="speaker-card" style="cursor: pointer; padding: 2rem; display: flex; flex-direction: column; align-items: center; max-width: 550px;" onclick="toggleLucie(this)">
     <div style="display: flex; align-items: center; gap: 1.5rem; text-align: left; width: 100%;">
       <img src="assets/speaker_images/lucie.jpg" alt="Lucie Flek" class="speaker-img" style="width: 110px; height: 110px; flex-shrink: 0; margin: 0;"/>
       <div>
@@ -31,7 +31,7 @@ nav_order: 4
         </div>
         <div class="speaker-designation" style="margin-top: 0.5rem; font-size: 1rem;">
           <span style="font-weight:600; color:#194e6a;">Professor</span><br>
-          <span style="font-style:italic; color:#333;">university of Bonn</span>
+          <span style="font-style:italic; color:#333;">University of Bonn</span>
         </div>
       </div>
     </div>
@@ -78,6 +78,15 @@ nav_order: 4
 
 <!--<script>
 function toggleZhijing(card) {
+  var abs = card.querySelector('.zhijing-abstract');
+  if (abs.style.display === "block") {
+    abs.style.display = "none";
+  } else {
+    abs.style.display = "block";
+  }
+}
+
+function toggleLucie(card) {
   var abs = card.querySelector('.zhijing-abstract');
   if (abs.style.display === "block") {
     abs.style.display = "none";
