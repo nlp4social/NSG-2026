@@ -62,12 +62,12 @@ nav_order: 4
 
 <p style="text-align: center; font-size: 1.2rem; font-style: italic; margin: 2rem 0;">To Be Announced (TBA)</p>
 
-<!--
+
 <div class="speaker-flex">
   {% for speaker in site.data.speakers.invited %}
   <div class="speaker-card">
-    <img src="{{ speaker.image }}" alt="{{ speaker.name }}" class="speaker-img"/>
-    <div class="speaker-name"><a href="{{ speaker.url }}" target="_blank" rel="noopener">{{ speaker.name }}</a></div>
+    <img src="assets/speaker_images/Rahul_Gupta.jpeg" alt="Rahul Gupta" class="speaker-img"/>
+    <div class="speaker-name"><a href="[{{ speaker.url }}](https://guptarah.github.io/index.html)" target="_blank" rel="noopener">{{ speaker.name }}</a></div>
     <div class="speaker-designation"><span style="font-weight:600; color:#194e6a;">{{ speaker.designation_title }}</span><br><span style="font-style:italic; color:#333;">{{ speaker.designation_org }}</span><br><span style="color:black">{{ speaker.designation_country }}</span></div>
     <button class="speaker-toggle-btn" onclick="toggleAbstract(this)">Talk Abstract</button>
     <div class="speaker-abstract">
@@ -77,7 +77,7 @@ nav_order: 4
   </div>
   {% endfor %}
 </div>
--->
+
 
 <!--<script>
 function toggleZhijing(card) {
