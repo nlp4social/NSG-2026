@@ -15,7 +15,7 @@ nav_order: 4
       <img src="assets/speaker_images/milind_tambe.jpg" alt="Zhijing Jin" class="speaker-img" style="width: 110px; height: 110px; flex-shrink: 0; margin: 0;"/>
       <div>
         <div class="speaker-name" style="font-size: 1.4rem; margin-top: 0;">
-          <a href="https://zhijing-jin.com/home/" target="_blank" rel="noopener" style="text-decoration: none;" onclick="event.stopPropagation();">Milind Tambe</a>
+          <a href="https://teamcore.seas.harvard.edu/tambe/" target="_blank" rel="noopener" style="text-decoration: none;" onclick="event.stopPropagation();">Milind Tambe</a>
         </div>
         <div class="speaker-designation" style="margin-top: 0.5rem; font-size: 1rem;">
           <span style="font-weight:600; color:#194e6a;">Professor</span><br>
@@ -30,7 +30,7 @@ nav_order: 4
       <img src="assets/speaker_images/lucie.jpg" alt="Lucie Flek" class="speaker-img" style="width: 110px; height: 110px; flex-shrink: 0; margin: 0;"/>
       <div>
         <div class="speaker-name" style="font-size: 1.4rem; margin-top: 0;">
-          <a href="https://zhijing-jin.com/home/" target="_blank" rel="noopener" style="text-decoration: none;" onclick="event.stopPropagation();">Lucie Flek</a>
+          <a href="https://lamarr-institute.org/person/lucie-flek/" target="_blank" rel="noopener" style="text-decoration: none;" onclick="event.stopPropagation();">Lucie Flek</a>
         </div>
         <div class="speaker-designation" style="margin-top: 0.5rem; font-size: 1rem;">
           <span style="font-weight:600; color:#194e6a;">Professor</span><br>
