@@ -8,7 +8,8 @@ nav_order: 5
 
 ## Schedule
 
-<p style="text-align: center; font-size: 1.2rem; font-style: italic; margin: 2rem 0;">To Be Announced (TBA)</p>
+<p style="text-align: center; font-size: 1.2rem; font-style: italic; margin: 2rem 0;"> 9:00 am - 9: 15 am - Welcome note </p>
+<p style="text-align: center; font-size: 1.2rem; font-style: italic; margin: 2rem 0;"> 9:15 am - 10.00 am - Keynote By Milind Tambe </p>
 
 <!--
 {% for day in site.data.programme %}
