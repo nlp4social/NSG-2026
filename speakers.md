@@ -66,16 +66,13 @@ nav_order: 4
     <img src="assets/speaker_images/Rahul_Gupta.jpeg" alt="Rahul Gupta" class="speaker-img"/>
     <div class="speaker-name"><a href="https://guptarah.github.io/index.html" target="_blank" rel="noopener">Rahul Gupta</a></div>
     <div class="speaker-designation"><span style="font-weight:600; color:#194e6a;">Lead AI Researcher</span><br><span style="font-style:italic; color:#333;">NASA's Marshall Space Flight Center (MSFC)</span><br><span style="color:black">USA</span></div>
-   
-</div>
-<div class="speaker-flex">
+  </div>
   <div class="speaker-card">
     <img src="assets/speaker_images/sujit.jpeg" alt="Rahul Gupta" class="speaker-img"/>
     <div class="speaker-name"><a href="http://www.sujitroy.co.in/" target="_blank" rel="noopener">Sujit Roy</a></div>
-    <div class="speaker-designation"><span style="font-weight:600; color:#194e6a;">Senior Applied Science Manager</span><br><span style="font-style:italic; color:#333;">Amazon Nova</span><br><span style="color:black">USA</span></div>
-   
+    <div class="speaker-designation"><span style="font-weight:600; color:#194e6a;">Senior Applied Science Manager</span><br><span style="font-style:italic; color:#333;">Amazon Nova</span><br><span style="color:black">USA</span></div>   
 </div>
-
+</div>
 
 <!--
  <button class="speaker-toggle-btn" onclick="toggleAbstract(this)">Talk Abstract</button>
