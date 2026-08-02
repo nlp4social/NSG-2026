@@ -19,7 +19,8 @@ nav_order: 5
 <p style="text-align: center; font-size: 1.2rem; font-style: italic; margin: 2rem 0;">3.05 pm - 3.35pm Invited Talk By Rahul Gupta </p>
 <p style="text-align: center; font-size: 1.2rem; font-style: italic; margin: 2rem 0;">3.35 pm- 4.05 pm. Coffee Break </p>
 <p style="text-align: center; font-size: 1.2rem; font-style: italic; margin: 2rem 0;">4.05 pm- 4.35 pm. Paper Presentation</p>
-<p style="text-align: center; font-size: 1.2rem; font-style: italic; margin: 2rem 0;">4.35 pm- 4.45 pm. Concluding Notes</p>
+<p style="text-align: center; font-size: 1.2rem; font-style: italic; margin: 2rem 0;">4.35 pm- 5.05 pm. Invited Talk By Sujit Roy</p>
+<p style="text-align: center; font-size: 1.2rem; font-style: italic; margin: 2rem 0;">5.05 pm- 5.15 pm. Concluding Notes</p>
 
 
 
