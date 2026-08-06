@@ -20,6 +20,7 @@ nav_order: 6
 
 ---
 
+
 <h2 style="text-align: center;">Organizers</h2>
 
 <div class="organizer-flex">
