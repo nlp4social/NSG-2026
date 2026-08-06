@@ -69,7 +69,7 @@ nav_order: 4
   </div>
   <div class="speaker-card">
     <img src="assets/speaker_images/sujit.jpeg" alt="Rahul Gupta" class="speaker-img"/>
-    <div class="speaker-name"><a href="http://www.sujitroy.co.in/" target="_blank" rel="noopener">Sujit Roy</a></div>
+    <div class="speaker-name"><a href="https://thesujitroy.github.io/" target="_blank" rel="noopener">Sujit Roy</a></div>
     <div class="speaker-designation"><span style="font-weight:600; color:#194e6a;">Lead AI Researcher, Principal Research Scientist III S4</span><br><span style="font-style:italic; color:#333;">NASA MSFC Office of Data Science and Informatics (ODSI)</span><br><span style="color:black">USA</span></div>   
 </div>
 </div>
