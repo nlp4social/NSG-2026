@@ -61,7 +61,7 @@ nav_order: 4
 ## Invited Speakers
 
 
-<div class="speaker-flex">
+<div class="speaker-flex" align="center">
   <div class="speaker-card">
     <img src="assets/speaker_images/Rahul_Gupta.jpeg" alt="Rahul Gupta" class="speaker-img"/>
     <div class="speaker-name"><a href="https://guptarah.github.io/index.html" target="_blank" rel="noopener">Rahul Gupta</a></div>
