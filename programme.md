@@ -8,8 +8,8 @@ nav_order: 5
 
 ## Schedule
 
-<p style="text-align: center; font-size: 1.2rem; font-style: italic; margin: 2rem 0;"> 9:00 am. - 9: 15 am. - Welcome Note </p>
-<p style="text-align: center; font-size: 1.2rem; font-style: italic; margin: 2rem 0;"> 9:15 am. - 10.15 am. - Keynote By Milind Tambe, "Agentic and Generative AI for Global Social Impact: Overcoming the Deployment Bottleneck" </p>
+<p style="text-align: center; font-size: 1.2rem; font-style: italic; margin: 2rem 0;"> 9.00 am. - 9.15 am. - Welcome Note </p>
+<p style="text-align: center; font-size: 1.2rem; font-style: italic; margin: 2rem 0;"> 9.15 am. - 10.15 am. - Keynote By Milind Tambe, "Agentic and Generative AI for Global Social Impact: Overcoming the Deployment Bottleneck" </p>
 <p style="text-align: center; font-size: 1.2rem; font-style: italic; margin: 2rem 0;"> 10:15 am. - 10.45 am. - Paper Presentation </p>
 <p style="text-align: center; font-size: 1.2rem; font-style: italic; margin: 2rem 0;"> 10:45 am.- 11.15 am. Coffee Break</p>
 <p style="text-align: center; font-size: 1.2rem; font-style: italic; margin: 2rem 0;"> 11.15 am. - 12.15 am. -Keynote By Lucy Flek</p>
